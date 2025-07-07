@@ -1,113 +1,181 @@
-# 📦 Supply Chain Business Model
 
-This project focuses on analyzing supply chain data to identify bottlenecks, optimize performance, and generate valuable business insights using Python and data science tools.
 
----
+# 📦 Supply Chain Business Model - Product Weight Prediction
 
-## 📊 Project Objective
+This is an end-to-end machine learning project focused on predicting the **product weight in tons (`product_wg_ton`)** in a supply chain setup. By using data preprocessing, outlier handling, dimensionality reduction (PCA), and regression modeling (XGBoost), we aim to build a reliable model for accurate product weight estimation.
 
-The goal of this project is to:
-- Analyze supply chain data to uncover patterns and inefficiencies
-- Visualize key supply chain metrics and KPIs
-- Use machine learning for forecasting or anomaly detection
-- Drive data-driven improvements in inventory and logistics
+# What is a Supply Chain?
+A supply chain is the complete process of making and delivering a product — from raw materials to the final product reaching the customer. It includes all the steps involved in producing, storing, transporting, and selling goods.
 
----
+# Key Components of a Supply Chain:
+Suppliers:
+Provide raw materials or components needed to make the product.
 
-## 📁 Folder Structure
+Manufacturing:
+The process of converting raw materials into finished goods.
 
-```
+Warehousing:
+Storage of raw materials and finished products before they are sold or shipped.
 
-SupplyChain\_BusinessModel/
-│
-├── data/                # Contains raw or cleaned data files
-├── research/            # Jupyter notebooks or EDA experiments
-├── src/                 # Source code modules
-│   └── SPC/             # Main package for loading, processing, modeling
-├── model.py             # Script for training or evaluating models
-├── main.py              # Entry point to run the pipeline
-├── requirements.txt     # Python dependencies
-└── README.md            # Project documentation
+Distribution:
+Moving the products from factories or warehouses to wholesalers, retailers, or customers.
 
-````
+Retailers/Customers:
+Final delivery of products to end-users or consumers.
 
----
+Information Flow:
+Sharing data across all stages (e.g., order details, inventory levels) to make better decisions.
 
-## 🧪 Features
+Logistics:
+The coordination of transportation, storage, and delivery to ensure goods move efficiently.
 
-- ✅ Data loading and preprocessing
-- 📈 Exploratory Data Analysis (EDA)
-- 🔍 Insight extraction and visualizations
-- 🤖 Machine learning model (if applicable)
-- 🧼 Clean modular code with `src/SPC/` structure
+## 🧾 Table of Contents
 
----
-
-## 🛠️ Technologies Used
-
-- **Python 3.10+**
-- **Pandas**
-- **NumPy**
-- **Matplotlib / Seaborn**
-- **Scikit-learn** (if ML applied)
-- **Jupyter Notebook**
+- [Objective](#objective)
+- [Dataset Overview](#dataset)
+- [Technologies Used](#technologies)
+- [Workflow Steps](#workflow)
+- [Model Performance](#performance)
+- [How to Run](#run)
+- [Future Improvements](#future)
+- [OOP Concepts](#oops)
+- [Author](#author)
 
 ---
 
-## 🚀 Getting Started
+## 🎯 Objective <a name="objective"></a>
 
-### 1. Clone the Repository
-```bash
-git clone https://github.com/mukeshmagar543/SupplyChain_BusinessModel.git
-cd SupplyChain_BusinessModel
-````
+To develop a regression model that accurately predicts **product weight in tons** (`product_wg_ton`) using features related to warehouse operations, capacity, and logistics in the supply chain. The final model should help in operational forecasting and logistics optimization.
 
-### 2. Install Dependencies
+To accurately predict the product weight (in tons) using machine learning regression techniques.
 
-```bash
-pip install -r requirements.txt
-```
+To analyze key features that impact product weight and improve model performance.
 
-### 3. Run the Project
+To develop a robust model that can help in efficient inventory management and logistics planning.
 
-```bash
-python main.py
-```
+To minimize prediction errors and optimize resource allocation based on weight forecasts.
+
+Sure! Here’s a simpler version of the problem statement:
 
 ---
 
-## 📊 Sample Visualizations
+### Problem Statement:
 
-Add a few plots like:
+It is hard to guess the exact weight of products by hand, which can cause mistakes in shipping and inventory. This project aims to create a machine learning model that can quickly and accurately predict product weight using available data, helping to save time and reduce errors.
 
-* Inventory Trends
-* Lead Time Distribution
-* Demand Forecast vs Actual
+## 📂 Dataset Overview <a name="dataset"></a>
 
-*(Optional: Insert images using markdown once visuals are generated)*
-
----
-
-## 📈 Future Work
-
-* Integrate dashboards (Tableau/Power BI)
-* Add forecasting models (ARIMA, Prophet)
-* Automate reporting pipeline
+- **Source:** [SCM.csv on GitHub](https://raw.githubusercontent.com/mukeshmagar543/SupplyChain_BusinessModel/refs/heads/main/research/SCM.csv)
+- **Target Column:** `product_wg_ton` (Product weight in tons)
+- **Features:**
+  - Warehouse ID, Manager ID, Workers
+  - Capacity, Region, Zone, Location Type
+  - Owner Type, Certification Status
+  - and more...
 
 ---
 
-## 👤 Author
+## 🧰 Technologies Used <a name="technologies"></a>
+
+- **Language**: Python
+- **Libraries**:
+  - `pandas`, `numpy` – Data manipulation
+  - `seaborn`, `matplotlib` – Data visualization
+  - `scikit-learn` – Preprocessing, PCA, modeling
+  - `xgboost` – Regression
+  - `logging`, `warnings` – Runtime handling
+
+---
+
+## ⚙️ Workflow Steps <a name="workflow"></a>
+
+### 1. Data Cleaning
+- Dropped unnecessary columns
+- Filled missing values (e.g., median for `workers_num`, 'C' for certifications)
+
+### 2. Encoding & Outlier Handling
+- Used `LabelEncoder` for categorical variables
+- Replaced numeric outliers using IQR method and median
+
+### 3. Dimensionality Reduction
+- Applied **MinMaxScaler** for normalization
+- Used **PCA** to retain ≥90% variance (reduced dimensions)
+
+### 4. Model Building
+- Split data into train and test sets (70/30)
+- Trained **XGBoost Regressor**
+- Evaluated model using **R² score**
+
+---
+
+## 📈 Model Performance <a name="performance"></a>
+
+| Metric   | Value   |
+|----------|---------|
+| R² Score (Training) | **~0.95** |
+| Model Type | XGBoost Regressor |
+| Problem Type | Regression |
+
+> ✅ The model captures ~95% of the variance in training data, showing strong predictive capability.
+
+---
+
+## ▶️ How to Run the Project <a name="run"></a>
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/mukeshmagar543/SupplyChain_BusinessModel.git
+   cd SupplyChain_BusinessModel
+`
+
+2. Install dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Open and run the Jupyter notebook:
+
+   ```bash
+   jupyter notebook model.ipynb
+   ```
+
+---
+
+## 🚀 Future Improvements <a name="future"></a>
+
+* Evaluate model on test data and compare metrics
+* Add hyperparameter tuning using `GridSearchCV`
+* Try alternative models (e.g., Random Forest, SVR)
+* Deploy with Flask or Streamlit for real-time use
+* Integrate SHAP for explainable AI
+
+---
+
+## 🧠 OOPs Concepts Used <a name="oops"></a>
+
+This project leverages OOPs (Object-Oriented Programming) in Python:
+
+| Concept        | Description                                    |
+| -------------- | ---------------------------------------------- |
+| Class & Object | Blueprint and instance                         |
+| Inheritance    | Reuse code from parent class                   |
+| Polymorphism   | Same method, different behavior                |
+| Encapsulation  | Hiding data and providing access via methods   |
+| Abstraction    | Hiding complex logic, exposing only essentials |
+
+Example usage includes model class abstraction, scikit-learn's object-based structure, and structured data pipeline.
+
+
+## 👤 Author <a name="author"></a>
 
 **Mukesh Magar**
-📧 \[[mukeshmagar543.com]]
-📌 India
+📧 Email: \[[mukeshmagar543@gmail.com](mailto:your_email@example.com)]
+🌐 GitHub: [mukeshmagar543](https://github.com/mukeshmagar543)
 
----
 
-## 📄 License
+## 🏷️ Tags
 
-This project is licensed under the MIT License - see the [Apache](LICENSE) file for details.
+`#Regression` `#SupplyChain` `#PCA` `#XGBoost` `#Python` `#DataScience` `#OOPs`
 
-````
 
----
