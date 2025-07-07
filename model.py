@@ -22,7 +22,7 @@ logging.basicConfig(
 )
 
 
-url="https://raw.githubusercontent.com/MontyVasita18/SupplyChain_BusinessModel/refs/heads/main/SCM.csv"
+url="https://raw.githubusercontent.com/mukeshmagar543/SupplyChain_BusinessModel/refs/heads/main/research/SCM.csv"
 df=pd.read_csv(url)
 
 numeric_data=df.select_dtypes(exclude='object')
@@ -134,6 +134,5 @@ y_pred_xgb = xgb_model.predict(X_train)
 # Evaluate using R² score
 r2_score_xgb = r2_score(y_train, y_pred_xgb)
 print("R² Score:", r2_score_xgb)
-
 
 

@@ -1,0 +1,32 @@
+[2025-07-07 19:01:50,640]: Creating directory; .github\workflows for the file: .gitkeep:
+[2025-07-07 19:01:50,640]: Creating empty file: .github\workflows\.gitkeep:
+[2025-07-07 19:01:50,642]: Creating directory; src\Supply Chain Business Model for the file: __init__.py:
+[2025-07-07 19:01:50,643]: Creating empty file: src\Supply Chain Business Model\__init__.py:
+[2025-07-07 19:01:50,643]: Creating directory; src\Supply Chain Business Model\components for the file: __init__.py:
+[2025-07-07 19:01:50,643]: Creating empty file: src\Supply Chain Business Model\components\__init__.py:
+[2025-07-07 19:01:50,643]: Creating directory; src\Supply Chain Business Model\utils for the file: __init__.py:
+[2025-07-07 19:01:50,644]: Creating empty file: src\Supply Chain Business Model\utils\__init__.py:
+[2025-07-07 19:01:50,644]: Creating directory; src\Supply Chain Business Model\utils for the file: common.py:
+[2025-07-07 19:01:50,644]: Creating empty file: src\Supply Chain Business Model\utils\common.py:
+[2025-07-07 19:01:50,645]: Creating directory; src\Supply Chain Business Model\config for the file: __init__.py:
+[2025-07-07 19:01:50,645]: Creating empty file: src\Supply Chain Business Model\config\__init__.py:
+[2025-07-07 19:01:50,645]: Creating directory; src\Supply Chain Business Model\config for the file: configuration.py:
+[2025-07-07 19:01:50,645]: Creating empty file: src\Supply Chain Business Model\config\configuration.py:
+[2025-07-07 19:01:50,646]: Creating directory; src\Supply Chain Business Model\pipeline for the file: __init__.py:
+[2025-07-07 19:01:50,646]: Creating empty file: src\Supply Chain Business Model\pipeline\__init__.py:
+[2025-07-07 19:01:50,646]: Creating directory; src\Supply Chain Business Model\entity for the file: __init__.py:
+[2025-07-07 19:01:50,646]: Creating empty file: src\Supply Chain Business Model\entity\__init__.py:
+[2025-07-07 19:01:50,646]: Creating directory; src\Supply Chain Business Model\entity for the file: config_entity.py:
+[2025-07-07 19:01:50,647]: Creating empty file: src\Supply Chain Business Model\entity\config_entity.py:
+[2025-07-07 19:01:50,647]: Creating directory; src\Supply Chain Business Model\constants for the file: __init__.py:
+[2025-07-07 19:01:50,647]: Creating empty file: src\Supply Chain Business Model\constants\__init__.py:
+[2025-07-07 19:01:50,647]: Creating directory; config for the file: config.yaml:
+[2025-07-07 19:01:50,647]: Creating empty file: config\config.yaml:
+[2025-07-07 19:01:50,648]: Creating empty file: main.py:
+[2025-07-07 19:01:50,648]: Creating empty file: app.py:
+[2025-07-07 19:01:50,648]: Creating empty file: requirements.txt:
+[2025-07-07 19:01:50,649]: setup.py is already exists:
+[2025-07-07 19:01:50,649]: Creating directory; research for the file: trials.ipynb:
+[2025-07-07 19:01:50,649]: Creating empty file: research\trials.ipynb:
+[2025-07-07 19:01:50,649]: Creating directory; templates for the file: index.html:
+[2025-07-07 19:01:50,650]: Creating empty file: templates\index.html:
